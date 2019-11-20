@@ -1,0 +1,22 @@
+<script>
+// már használtunk olyan sorokat, mint
+// alert("Hello")
+// és
+// console.log("Hello")
+// Ezekben az alert és a console.log egy-egy ún. függvény - azaz "valami, ami tud csinálni valamit".
+// Az utána lévő zárójel pedig a függvény "meghívását" jelzi - azaz megkérjük, hogy csinálja meg azt a valamit, amit tud - és egyszersmind megadjuk a hozzá szükséges adatokat.
+
+// Mi is csinálhatunk függvényt:
+const sayHello = function (name) {
+  alert('Hello ' + name + '!')
+}
+
+// Az oldalon, ha megnyitod a böngészőben, van egy gomb, ami kattintáskor ezt a
+// függvényt hívja meg. A kódot lentebb láthatod.
+
+// ***** Feladat: készíts egy függvényt, ami a másik gombot is életre kelti!
+
+</script>
+
+<button onclick="sayHello('Joe')">Üdvözlés</button>
+<button onclick="sayGoodbye('Jim')">Elköszönés</button>
