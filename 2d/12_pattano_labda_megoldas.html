@@ -21,19 +21,19 @@ function draw () {
   labda.x = labda.x + labda.sebx
   labda.y = labda.y + labda.seby
 
-  // jobb falon pattanás
+  // jobb falon pattanás - x koordinátát nézzük
   if (labda.x > width) {
     labda.sebx = -labda.sebx 
   }
-  // alsó falon pattanás
+  // alsó falon pattanás - y koordinátát nézzük height-hoz képest
   if (labda.y > height) {
     labda.seby = -labda.seby 
   }
-  // bal falon pattanás
+  // bal falon pattanás - x koordinátát nézzük 0-hoz képest
   if (labda.x < 0) {
     labda.sebx = -labda.sebx 
   }
-  // felső falon pattanás
+  // felső falon pattanás - koordinátát nézzük 0-hoz képest
   if (labda.y < 0) {
     labda.seby = -labda.seby 
   }
