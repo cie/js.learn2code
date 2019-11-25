@@ -1,0 +1,31 @@
+Nyisd meg ezt a fájlt egy webböngészőben! És mellette egy editorban vagy IDE-ben is! (pl. Notepad-ben, vagy Visual Studio Code-ban)
+
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<script>
+
+function setup () {
+  createCanvas(800, 600)
+}
+
+function draw () {
+  background('black')
+
+  // először beállítjuk fehérre a kitöltőszínt:
+
+  fill('white')
+
+  // aztán megrajzoljuk a tégalapot: a szélessége 300, a magassága 200, és
+  // középen van a rajzvásznon
+
+  rect(width/2 - 300/2, height/2 - 200/2, 300, 200)
+
+  // aztán pirosra állítjuk a kitöltőszínt
+
+  fill('red')
+
+  // aztán megrajzoljuk a kört: ez is középen van a rajzvásznon, és a szélessége/magassága 120
+
+  ellipse(width/2, height/2, 120)
+}
+
+</script>

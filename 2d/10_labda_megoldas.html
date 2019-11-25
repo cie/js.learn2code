@@ -1,0 +1,32 @@
+Ezt a fájlt is nyisd meg webböngészőben és editorban/IDE-ben is.
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script><br/>
+<script>
+
+// Ez itt a labda adatait tartalmazó objektum.
+var labda = {
+  x: 30,
+  y: 40,
+
+  // itt az új tulajdonság, amit létre kellett hozni. Mindegy, hogy sorrendben hova tesszük, csak a
+  // vesszőkre kell nagyon-nagyon figyelni.
+  meret: 30,
+
+  color: 'yellow'
+}
+
+function setup () {
+  createCanvas(800, 600)
+}
+
+function draw () {
+  background('black')
+
+  // itt használjuk a labda.color tulajdonságot
+  fill(labda.color)
+
+  // itt használjuk a labda.meret tulajdonságot
+  ellipse(labda.x, labda.y, labda.meret, labda.meret)
+}
+
+
+</script>

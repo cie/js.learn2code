@@ -33,10 +33,18 @@ function draw () {
 
 
   // ***** Feladat: rajzolj egy japán zászlót (fehér téglalaban piros kör) a kék téglalap helyett
-  // segítség:
-  // kört az ellipse() függvénnyel lehet rajzolni, aminek a négy paramétere:
+
+  // Kört az ellipse() függvénnyel lehet rajzolni, aminek a négy paramétere:
   // a középpont x és y koordinátái, a szélesség és a magasság. Mivel kört szeretnénk,
-  // a szélesség és a magasság azonos kell legyen, pl. ellipse(400, 300, 30, 30)
+  // a szélesség és a magasság azonos kell legyen, pl. ellipse(400, 400, 30, 30)
+
+  // Hasznos segítség lehet a  width  és a  height  változó, ami a rajzvászon szélességét
+  // és magasságát jelenti. Ha pl. a rajzvászon közepére szeretnéd tenni a kört, azt lehet így:
+
+  // ellipse(width/2, height/2, 30, 30)
+
+  // Persze biztos ki tudnád számítani fejben is, hogy mik lennének a helyes koordináták, de minek
+  // számítsunk fejben, ha vagy egy SZÁMÍTÓGÉPÜNK? :)
 }
 
 </script>

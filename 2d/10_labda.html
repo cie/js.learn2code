@@ -14,9 +14,9 @@ A következő feladat, hogy egy labdát rajzolj meg, ami a 30,40 pontban van, é
 var labda = {
   x: 30,
   y: 40,
-  color: 'yellow'
+  szin: 'yellow'
 }
-// három tulajdonsága (propertyje) van: a két koordinátája, (x, y) és a színe (color)
+// három tulajdonsága (propertyje) van: a két koordinátája, (x, y) és a színe (szin)
 
 
 function setup () {
@@ -37,11 +37,14 @@ function draw () {
   // Figyeld meg, hogy ha a labda valamelyik tuladjonságát szeretnénk elérni,
   // azt egy ponttal jelezzük a labda név és a tulajdonság neve között, pl.  labda.x
 
-  // Igen ám, de most még zölddel rajzoljuk, pedig a labda  color  tulajdonsága  'yellow'
+  // Igen ám, de most még zölddel rajzoljuk, pedig a labda  szin  tulajdonsága  'yellow'
 
-  // ***** Feladat: javítsd ki a kódot úgy, hogy közvetlenül a labda  color  tuajdonságát használja
-  // (Ne másold le, hogy  'yellow' ! Használd a  labda.color  kifejezést! )
+  // ***** Feladat: a) javítsd ki a kódot úgy, hogy közvetlenül a labda  szin  tuajdonságát használja
+  // (Ne másold le, hogy  'yellow' ! Használd a  labda.szin  kifejezést! )
 
+  // ***** b) a 30-as szám a fenti sorban a labda mérete, az is a labdához tartozó adat.
+  // hozz létre fent a labda objektumban egy új tulajdonságot  meret  néven, aminek az értéke 30!
+  // Itt lenn a kirajzoló kódban pedig használd azt!
 }
 
 

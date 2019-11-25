@@ -1,0 +1,67 @@
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<script>
+
+/*
+
+  Szeretnénk megcsinálni, hogy a labda visszapattanjon a falról.
+
+  Ehhez viszont az kell, hogy tároljuk, hogy milyen irányban repül a labda.
+  Ezt többféleképpen lehet csinálni, de a legegyszerűbb, ha az x irányú
+  sebességét és az y irányú sebességét - azokat a számokat, amiket az előző
+  feladatban minden képkockánál hozzáadtunk - azokat is a labda egy-egy
+  tulajdonságában tároljuk.
+
+*/
+
+var labda = {
+  x: 30,
+  y: 40,
+  meret: 30,
+
+  // **** itt van a két új tulajdonság, a labda x és y irányú sebesége
+  sebx: 5,
+  seby: 2,
+
+  color: 'yellow'
+}
+
+
+function setup () {
+  createCanvas(800, 600)
+}
+
+function draw () {
+  // ***** Figyeld meg, hogy ide betettük a labda.sebx-et és a labda.seby-t
+  labda.x = labda.x + labda.sebx
+  labda.y = labda.y + labda.seby
+
+  // Az alábbi kód megoldja, hogy a labda visszapattanjon a jobb széléről
+  // ***** Vedd ki a // jeleket, az alábbi kód sorai elejéről, hogy működjön!
+
+  // if (labda.x > width) {
+  //   labda.sebx = -labda.sebx 
+  // }
+
+  /*
+  Ezt így kell értelmezni: ha a labda x koordinátája nagyobb, mint a rajzvászon
+  szélessége (ami azt jelenti, hogy kiment alul), akkor a labda x irányú
+  sebessége legyen a jelenlegi x irányú sebességének ellentettje. Magyarul:
+  menjen vízszintesen az ellenkező irányba.
+
+  ***** Feladat: csináld meg, hogy mind a négy falon pattanjon! Vigyázz, hogy
+  mikor változtatod az x és mikor az y irányú sebességet!
+
+  Segítség: a rajzvászon szélessége a  width  változóban van, a rajzvászon
+  magassága a  height  változóban.
+
+  */
+
+  background('black')
+
+  fill(labda.color)
+  ellipse(labda.x, labda.y, labda.meret, labda.meret)
+}
+
+
+</script>
+
