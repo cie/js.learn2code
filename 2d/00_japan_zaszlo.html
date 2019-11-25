@@ -1,0 +1,42 @@
+Nyisd meg ezt a fájlt egy webböngészőben! És mellette egy editorban vagy IDE-ben is! (pl. Notepad-ben, vagy Visual Studio Code-ban)
+
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<script>
+
+/* Helló! */
+
+// Ez itt JavaScript kód!
+// Amiket ide írunk, azt a böngésző lefuttatja, kivéve a megjegyzéseket (kommenteket), amiket
+// egy // jeltől a sor végéig, vagy /* és */ jelek között lehet megadni.
+
+
+function setup () {
+  // itt írjuk le, hogy mi történjen a program indulásakor:
+  // hozzunk létre egy rajzvásznat, ami 800 pixel széles és 600 pixel magas
+
+  createCanvas(800, 600)
+}
+
+function draw () {
+  // itt írjuk le, hogy mi történjen egy-egy képkocka kirajzolásakor
+  // először is töröljük le a hátteret feketével:
+
+  background('black')
+
+  // aztán állítsuk be kékre a kitöltőszínt, és rajzoljunk egy tégalalpot
+
+  fill('blue')
+  rect(50, 90, 300, 200)
+
+  // A paraméterek:  bal felső sarok x és y koordinátái, szélesség, magasság
+  // A koordinátarendszer 0,0 pontja a vászon bal felső sarka, az x jobbra, az y lefelé van.
+
+
+  // ***** Feladat: rajzolj egy japán zászlót (fehér téglalaban piros kör) a kék téglalap helyett
+  // segítség:
+  // kört az ellipse() függvénnyel lehet rajzolni, aminek a négy paramétere:
+  // a középpont x és y koordinátái, a szélesség és a magasság. Mivel kört szeretnénk,
+  // a szélesség és a magasság azonos kell legyen, pl. ellipse(400, 300, 30, 30)
+}
+
+</script>

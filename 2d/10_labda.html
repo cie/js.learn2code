@@ -1,0 +1,48 @@
+Ezt a fájlt is nyisd meg webböngészőben és editorban/IDE-ben is.
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script><br/>
+<script>
+
+/*
+Gratulálok, eljutottál az 1. szintre (JavaScript-ben 0-val kezdjük számozni
+a dolgokat, így az előző volt a 0. szint :)
+
+A következő feladat, hogy egy labdát rajzolj meg, ami a 30,40 pontban van, és sárga.
+
+*/
+
+// Ez itt a labda adatait tartalmazó ún. objektum.
+var labda = {
+  x: 30,
+  y: 40,
+  color: 'yellow'
+}
+// három tulajdonsága (propertyje) van: a két koordinátája, (x, y) és a színe (color)
+
+
+function setup () {
+  // ahogy az előző feladatban, itt is először létrehozzuk a rajzvásznat
+  createCanvas(800, 600)
+}
+
+function draw () {
+  // mi történjen egy képkocka rajzolásakor?
+  // ahogy eddig is, először feketével töröljük a vásznat:
+  background('black')
+
+
+  // aztán ki kéne rajzolni a labdát:
+  fill('green')
+  ellipse(labda.x, labda.y, 30, 30)
+
+  // Figyeld meg, hogy ha a labda valamelyik tuladjonságát szeretnénk elérni,
+  // azt egy ponttal jelezzük a labda név és a tulajdonság neve között, pl.  labda.x
+
+  // Igen ám, de most még zölddel rajzoljuk, pedig a labda  color  tulajdonsága  'yellow'
+
+  // ***** Feladat: javítsd ki a kódot úgy, hogy közvetlenül a labda  color  tuajdonságát használja
+  // (Ne másold le, hogy  'yellow' ! Használd a  labda.color  kifejezést! )
+
+}
+
+
+</script>

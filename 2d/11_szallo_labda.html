@@ -1,0 +1,47 @@
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<script>
+
+/*
+
+A következő feladat, hogy egy szálló labdát készíts.
+Ehhez minden egyes képkocka kirajzolása előtt meg kell változtatni
+a labda x és y koordinátáját, pl. mindegyikhez hozzáadni 4-et
+(vagy többet, ha gyorsabbra szeretnéd).
+
+*/
+
+// Ez itt a labda adatait tároló objektum
+var labda = {
+  x: 30,
+  y: 40,
+  color: 'yellow'
+}
+
+
+function setup () {
+  createCanvas(800, 600)
+}
+
+function draw () {
+  // Mi történjen egy képkocka rajzolása előtt?
+
+  // ***** Feladat:
+  // a) Növeljük meg 1-el a labda x koordinátáját minden képkockánál.
+  // Írd le ezt a sort (vagy vedd ki előle a // jelet):
+  // labda.x = labda.x + 1
+
+  // ***** b) Ha kipróbálod, látod, hogy ez még egy kicsit lassú, és csak vízszintesen megy.
+  // növeld 1 helyett nagyobb számmal, és ne csak az x-et, hanem az y-t is!
+
+
+  // ***** c) Próbáld ki, hogy nem ugyanannyival növeled meg az x-et és az y-t!
+  // ***** d) Próbáld ki, hogy az egyiket nem növeled, hanem csökkented!
+
+  background('black')
+
+  fill(labda.color)
+  ellipse(labda.x, labda.y, 30, 30)
+}
+
+
+</script>
