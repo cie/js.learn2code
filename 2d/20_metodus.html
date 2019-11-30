@@ -1,0 +1,74 @@
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<script>
+
+/*
+
+Eddig a labda adatai közt csak konkrét értékeket tároltunk. De tulajdonképpen
+az is a labda adata, hogy *hogyan kell* őt kirajzolni és hogyan kell őt továbbléptetni -
+azaz különféle műveletek a labdával. Most ezeket is bevisszük a labda objektumába.
+
+*/
+
+let labda = {
+  x: 30,
+  y: 40,
+  meret: 30,
+
+  sebx: 5,
+  seby: 2,
+
+  color: 'yellow',
+
+  // Itt van az új tulajdonság, amit létrehoztunk.  Mivel ez egy művelet,
+  // a tulajdonság értéke nem egy egyszerű érték, hanem egy függvény (function),
+  // és ilyenkor azt mondjuk, hogy ez egy "metódus".
+  mozgat: function () {
+
+    // Ide tettük át a labdát mozgató kódot a  draw  függvényből: (Ja igen,
+    // a  draw  is egy függvény.)
+
+    // repülés
+    labda.x = labda.x + labda.sebx
+    labda.y = labda.y + labda.seby
+
+    // falakon pattanás
+    if (labda.x > width) {
+        labda.sebx = -labda.sebx 
+    }
+    if (labda.y > height) {
+        labda.seby = -labda.seby 
+    }
+    if (labda.x < 0) {
+        labda.sebx = -labda.sebx 
+    }
+    if (labda.y < 0) {
+        labda.seby = -labda.seby 
+    }
+  }
+}
+
+
+function setup () {
+  createCanvas(800, 600)
+}
+
+function draw () {
+  // ***** Innen szedtük ki a labdát mozgató kódot - ezért most nem is mozog a labda.
+  // ***** Feladat: a) tedd be ide azt a kódot, ami meghívja a fenti függvényt:
+  //labda.mozgat()
+
+  background('black')
+
+  // ***** b) Ezek a labdát kirajzoló utasítások. Csinálj fent a labda objektumában
+  // egy másik metódust  rajzol  néven, a  mozgat-hoz hasonlóan, és tedd át oda
+  // ezt a két sort!
+  fill(labda.color)
+  ellipse(labda.x, labda.y, labda.meret, labda.meret)
+  // ***** c) utána pedig hívd meg így:
+  //labda.rajzol()
+}
+
+
+</script>
+
+

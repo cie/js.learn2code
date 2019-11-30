@@ -1,0 +1,58 @@
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<script>
+
+let labda = {
+  x: 30,
+  y: 40,
+  meret: 30,
+
+  sebx: 5,
+  seby: 2,
+
+  color: 'yellow',
+
+  mozgat: function () {
+    // repülés
+    labda.x = labda.x + labda.sebx
+    labda.y = labda.y + labda.seby
+
+    // falakon pattanás
+    if (labda.x > width) {
+        labda.sebx = -labda.sebx 
+    }
+    if (labda.y > height) {
+        labda.seby = -labda.seby 
+    }
+    if (labda.x < 0) {
+        labda.sebx = -labda.sebx 
+    }
+    if (labda.y < 0) {
+        labda.seby = -labda.seby 
+    }
+  },  /* Nagyon fontos ez a vessző itt - két tulajdonság közé mindig kell vesszőt tenni. */
+
+  /* Itt az új metódus. A tartalmát két szóközzel beljebb kell húzni, ha szeretnénk, hogy
+     szép rendezett legyen a kód. */
+  rajzol: function () {
+    fill(labda.color)
+    ellipse(labda.x, labda.y, labda.meret, labda.meret)
+  },
+}
+
+
+function setup () {
+  createCanvas(800, 600)
+}
+
+function draw () {
+  labda.mozgat()
+
+  background('black')
+
+  labda.rajzol()
+}
+
+
+</script>
+
+
